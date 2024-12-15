@@ -99,10 +99,10 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	var result []int
-	for {
+// func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
+// 	var result []int
+// 	for {
 
-	}
-	return result
-}
+// 	}
+// 	return result
+// }

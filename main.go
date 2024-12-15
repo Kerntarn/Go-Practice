@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	result := leetcode.RomanToInt("MCMXCIV")
+	result := leetcode.IsValid("(})")
 	fmt.Println(result)
 }

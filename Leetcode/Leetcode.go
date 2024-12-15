@@ -42,3 +42,67 @@ func RomanToInt(s string) int {
 	}
 	return sum
 }
+
+func LongestCommonPrefix(strs []string) string {
+	prefix := ""
+	while := true
+	for ic := 0; while; ic++ {
+		tmp := '\u0000'
+		for _, v := range strs {
+			if ic != len(v) && (tmp == '\u0000' || rune(v[ic]) == tmp) {
+				tmp = rune(v[ic])
+			} else {
+				tmp = '\u0000'
+				while = false
+				break
+			}
+		}
+		if while {
+			prefix += string(tmp)
+		}
+	}
+	return prefix
+}
+
+func IsValid(s string) bool {
+	open := map[rune]int{
+		'{': 1,
+		'[': 2,
+		'(': 3}
+	close := map[rune]int{
+		'}': 1,
+		']': 2,
+		')': 3}
+	var stack []rune
+	for _, c := range s {
+		if _, found := open[c]; found {
+			stack = append(stack, c)
+		} else if _, found := close[c]; found {
+			if len(stack) == 0 {
+				return false
+			}
+			last := stack[len(stack)-1]
+			if open[last] != close[c] {
+				return false
+			}
+			stack = stack[:len(stack)-1]
+		}
+	}
+	if len(stack) > 0 {
+		return false
+	}
+	return true
+}
+
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
+	var result []int
+	for {
+
+	}
+	return result
+}

@@ -3,11 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/google/uuid"
+	leetcode "github.com/Kerntarn/Go-Practice/Leetcode"
 )
 
 func main() {
-	id := uuid.New()
-	fmt.Print("Hello world")
-	fmt.Printf("UUDI: %s", id)
+	result := leetcode.RomanToInt("MCMXCIV")
+	fmt.Println(result)
 }
